@@ -1,0 +1,10 @@
+{
+  "title": "AcidOP",
+  "description": "I am a full stack web developer with a passion for programming. Currently I am intersted in learning about cybersecurity and malware development.",
+  "url": "https://acidop.codes",
+  "image": "https://acidop.codes/images/og-image.jpg",
+  "author": {
+    "name": "AcidOP",
+    "email": "acid@acidop.codes"
+  }
+}
