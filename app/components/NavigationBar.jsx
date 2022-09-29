@@ -24,8 +24,7 @@ const NavigationBar = () => {
               navlinks.map((link, index) => {
                 return (
                   <li key={index}>
-                    {/* <Button name={link.name} url={link.path} /> */}
-                    <Link to={link.path} className="btn" >
+                    <Link to={link.path} className="btn" prefetch="render" >
                       {link.name}
                     </Link>
                   </li>
@@ -51,7 +50,7 @@ const NavigationBar = () => {
               navlinks.map((link, index) => {
                 return (
                   <li key={index}>
-                    <Link to={link.path} className="btn">
+                    <Link to={link.path} className="btn" prefetch="render" >
                       {link.name}
                     </Link>
                   </li>
