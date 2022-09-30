@@ -4,15 +4,15 @@
 
 @layer components {
   .btn {
-    @apply py-2 px-4 rounded-md hover:bg-slate-300/25 hover:text-yellow-500;
+    @apply py-2 px-4 rounded-md hover:bg-zinc-800 hover:text-yellow-500;
   }
 
   .btn-primary {
-    @apply btn flex items-center shadow-sm shadow-yellow-300 rounded-lg bg-slate-300/25 px-5 py-2 hover:text-yellow-500 gap-1;
+    @apply btn flex items-center shadow-sm shadow-yellow-300 rounded-lg bg-zinc-800 px-5 hover:text-yellow-500 gap-1;
   }
 
   .card-hover {
-    @apply hover:bg-slate-300/25 hover:scale-105 ease-linear duration-75;
+    @apply hover:bg-zinc-800 hover:scale-105 ease-linear duration-75;
   }
 
   .heading {

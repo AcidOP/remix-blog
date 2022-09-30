@@ -1,67 +1,37 @@
-import { useState } from "react"
 import PageUrlDisplay from "./PageUrlDisplay"
-import navlinks from '~/config/navlinks.js'
+import navlinks from '~/config/headerLinks.js'
 import { Link } from "@remix-run/react";
-
-import { HiMenu } from 'react-icons/hi'
-import { MdClose } from 'react-icons/md'
+import Hamburger from "./Hamburger";
 
 const NavigationBar = () => {
-  const [open, setOpen] = useState(false)
-  const toggle = () => setOpen(!open)
-  
   return (
-    <navbar className="sticky top-0 backdrop-blur-sm z-10">
-      <div className="flex justify-between items-center h-24 mb-3">
+    <>
+      <navbar className="sticky top-0 backdrop-blur-sm z-10">
+        <div className="flex justify-between items-center h-24 mb-3 px-5 sm:px-10">
 
-        {!open && <div>
-          <PageUrlDisplay />
-        </div>}
-
-        <div className="hidden lg:block">
-          <ul className="flex">
-            {
-              navlinks.map((link, index) => {
-                return (
-                  <li key={index}>
-                    <Link to={link.path} className="btn" prefetch="render" >
-                      {link.name}
-                    </Link>
-                  </li>
-                )
-              })
-            }
-          </ul>
-        </div>
-
-        <div className="lg:hidden">
-          {!open && <button onClick={toggle} className="text-2xl"><HiMenu /></button>}
-        </div>
-
-      </div>
-      {open && <div className="absolute top-0 left-0 w-full h-screen bg-black/90" >
-        <div className="flex flex-col items-center h-full">
-          <div className="flex flex-row justify-between py-7 w-full">
+          <div>
             <PageUrlDisplay />
-            <button onClick={toggle} className="text-2xl"><MdClose size={40} /></button>
           </div>
-          <ul className="flex flex-col items-center text-2xl space-y-3" onClick={toggle}>
-            {
-              navlinks.map((link, index) => {
-                return (
-                  <li key={index}>
-                    <Link to={link.path} className="btn" prefetch="render" >
-                      {link.name}
-                    </Link>
-                  </li>
-                )
-              })
-            }
-          </ul>
-        </div>
 
-      </div>}
-    </navbar>
+          <div className="flex flex-row items-center space-x-5">
+            <ul className="hidden lg:flex">
+              {
+                navlinks.map((link, index) => {
+                  return link.hamburgerOnly ? null : (
+                    <li key={index}>
+                      <Link to={link.path} className="btn" prefetch="render" >
+                        {link.name}
+                      </Link>
+                    </li>
+                  )
+                })
+              }
+            </ul>
+            <Hamburger />
+          </div>
+        </div>
+      </navbar>
+    </>
   )
 }
 

@@ -5,6 +5,10 @@ import { AiFillProject, AiFillCaretRight } from 'react-icons/ai'
 import { BiLinkExternal } from 'react-icons/bi'
 
 const ProjectCard = ({ title, description, slug, github, external, technologies }) => {
+
+  const descriptionLength = description.split(' ').length
+  const display = ( descriptionLength > 30 ) ? description.split(' ').slice(0, 30).join(' ') + '...' : description;
+
   return (
     <article className="border border-gray-700 card-hover  p-5 rounded-lg">
       <heading className="flex flex-row items-center justify-between ">
@@ -21,7 +25,7 @@ const ProjectCard = ({ title, description, slug, github, external, technologies 
       <Link to={`/projects/${slug}`} prefetch='render'>
         <main className="flex flex-col items-start">
           <h2 className="text-xl font-bold hover:text-yellow-500">{title}</h2>
-          <p className="text-gray-400">{description}</p>
+          <p className="text-gray-400">{display}</p>
           <button className="hover:text-yellow-500 mt-4 flex items-center">
             Read More <AiFillCaretRight className="pt-[5px]" />
           </button>

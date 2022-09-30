@@ -4,6 +4,10 @@ import { BsBookmarksFill } from 'react-icons/bs'
 import { AiFillCaretRight } from 'react-icons/ai'
 
 const ProjectCard = ({ title, description, slug }) => {
+
+  const descriptionLength = description.split(' ').length
+  const display = ( descriptionLength > 30 ) ? description.split(' ').slice(0, 30).join(' ') + '...' : description;
+
   return (
     <Link to={`/blogs/${slug}`} prefetch='render'>
       <article className="border border-gray-700 card-hover  p-5 rounded-lg">
@@ -12,7 +16,7 @@ const ProjectCard = ({ title, description, slug }) => {
             <BsBookmarksFill size={40} className="text-yellow-500" />
             <h2 className="text-xl font-bold hover:text-yellow-500">{title}</h2>
           </div>
-          <p className="text-gray-400">{description}</p>
+          <p className="text-gray-400">{display}</p>
           <button className="hover:text-yellow-500 mt-4 flex items-center">
             Read More <AiFillCaretRight className="pt-[5px]" />
           </button>

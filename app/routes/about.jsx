@@ -49,15 +49,15 @@ const about = () => {
 
           <p>How I built this website:</p>
           <ul className="flex flex-col space-y-2 lg:space-y-0">
-            <li className="lg:flex lg:space-x-1">
+            <li className="">
               <a href="https://remix.run/" className="text-yellow-500">Remix: </a>
               <p>Remix.js is the framework that I used to build this site</p>
             </li>
-            <li className="lg:flex lg:space-x-1">
+            <li>
               <a href="https://musing.vercel.app/" className="text-yellow-500">Parth Desai: </a>
               <p>Parth's website inspired the UI of this site</p>
             </li>
-            <li className="lg:flex lg:space-x-1">
+            <li>
               <a href="https://github.com/timlrx/tailwind-nextjs-starter-blog" className="text-yellow-500">Timothy's Starter Template: </a>
               <p>Template starter where I bootstrapped the project and converted to remix</p>
             </li>
