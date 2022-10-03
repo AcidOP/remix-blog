@@ -6,7 +6,7 @@ const RoutePage = ({ link, title, className }) => {
     link = link.slice(1)
   }
   return (
-    <Link to={`/${link}`} className={`flex flex-row text-yellow-500 text-sm ${className}`} >{title}
+    <Link to={`/${link}`} className={`flex flex-row font-bold text-yellow-500 text-sm ${className}`} prefetch='render' >{title}
     <button
     >
       <AiFillCaretRight size={20} className='pt-[5px]' />

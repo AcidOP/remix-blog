@@ -17,6 +17,6 @@ export const journey = [
   {
     date: "August 2022",
     title: "Deployed my first personal website 💝",
-    description: "Made my portfolio website with NextJS and successfully deployed it on Vercel.",
+    description: "Made my portfolio website with next.js and successfully deployed it on Vercel.",
   }
 ]

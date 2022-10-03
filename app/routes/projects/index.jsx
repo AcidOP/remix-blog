@@ -29,10 +29,10 @@ const ProjectIndex = () => {
         <h1 className='heading'>
           Projects
         </h1>
-        <h2 className='flex flex-col sm:flex-row'>
-          Here are some projects I have built with my {'\u00A0'}
+        <h2>
+          Here are some projects I have built with my {' '}
           <RoughNotation type="underline" show={true} color="red">
-            <h2>blood sweat and tears</h2>
+            blood sweat and tears
           </RoughNotation>
         </h2>
       </section>
