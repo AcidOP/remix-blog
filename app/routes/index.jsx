@@ -16,12 +16,12 @@ export function meta() {
 const Index = () => {
   return (
     <main >
-      <h1 className='text-4xl lg:pl-12 mb-10 font-extrabold'>
-        Hi, I am <span className="text-5xl font-extrabold text-yellow-500">Acid</span>
+      <h1 className='text-4xl md:text-5xl mb-10 font-bold'>
+        Hi, I am <span className="text-6xl font-extrabold text-yellow-500">Acid</span>
       </h1>
       <div className="flex justify-center">
         <section className="flex flex-col lg:flex-row items-center lg:items-start">
-          <article className="max-w-2xl">
+          <article className="max-w-2xl font-mono">
             <RoughNotation type="box" show={true} color="#FBBF24" strokeWidth={2} animationDelay={500} animationDuration={3000}>
               <p className="text-gray-300 px-6 lg:py-10">
                 Welcome to My personal blog where I write articles about my journey as a developer and my personal life.

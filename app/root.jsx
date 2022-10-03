@@ -33,11 +33,12 @@ export const links = () => [
   { rel: "stylesheet", href: tailwindStyles },
 ]
 
-export function ErrorBoundary() {
+export function ErrorBoundary({error}) {
   return (
     <div>
       <h1>A very horrific error has occurred</h1>
-      <pre>Error message: Oh it is nothing to worry about happens all the times</pre>
+      <pre>Error message: {error}</pre>
+      {/* <pre>Error message: Oh it is nothing to worry about happens all the times</pre> */}
       <div></div>
       <a href="/">Come home with me 🤚🏻</a>
     </div>

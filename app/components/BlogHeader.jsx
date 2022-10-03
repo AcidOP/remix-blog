@@ -4,7 +4,7 @@ import { timeToRead } from '~/helpers/readingTime'
 
 const BlogHeader = ({ title, date, wordCount }) => {
   return (
-    <RoughNotation type="underline" color="#FBBF24" show={true} className='w-4/5 flex flex-col justify-center items-center mb-7 pb-5 '>
+    <RoughNotation type="underline" color="#FBBF24" show={true} className='w-5/6 flex flex-col justify-center items-center mb-7 pb-5 '>
       <p className=' text-gray-500 font-bold'>{date}</p>
       <h1 className='heading'>{title}</h1>
       <div className="flex space-x-5">
